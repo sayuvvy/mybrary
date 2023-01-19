@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const coverImageBasePath = 'upload/bookcovers'
 
-const authorSchema = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
     title: {
         type: String, 
         required: true
@@ -32,4 +33,5 @@ const authorSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Book', authorSchema)
+module.exports = mongoose.model('Book', bookSchema)
+module.exports.coverImageBasePath = coverImageBasePath
